@@ -12,5 +12,7 @@ module.exports = (app) => {
   //     );
   //   });
 
+  router.post("/", controller.create);
+
   app.use("/api/blogposts/", router);
 };

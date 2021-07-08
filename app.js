@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 
 app.use(express.json());
+//express made body content jason
 
 app.get("/", function (request, response) {
   response.send("This is the top route in the Blog Post API");
