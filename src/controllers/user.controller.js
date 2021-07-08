@@ -21,3 +21,15 @@ exports.findById = (request, response) => {
       response.send(apicall.data);
     });
 };
+
+exports.create = (request, response) => {
+  axios
+    .post("https://jsonplaceholder.typicode.com/users", {
+      name: request.body.name,
+      username: request.body.username,
+      email: request.body.email,
+    })
+    .then((apicall) => {
+      response.send(apicall.data);
+    });
+};

@@ -5,5 +5,9 @@ module.exports = (app) => {
   router.get("/", controller.findAll); // GET user by Id
 
   router.get("/:id", controller.findById);
+
+  
+  router.post("/", controller.create);
+  
   app.use("/api/users", router);
 };

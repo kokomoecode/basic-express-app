@@ -35,3 +35,28 @@ Content-Type: application/json
     "body": "Here is a paragraph about nothing. SeinField would be proud.",
     "userId": 1
 }
+
+
+
+###
+
+POST http://localhost:3000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "David Beckham ",
+    "username": "DavidRobertBeckham",
+    "email": "davidbeckham@gmail.com"
+}
+
+###
+
+POST http://localhost:3000/api/todos HTTP/1.1
+Content-Type: application/json
+
+{
+    "userId": "77",
+    "id": "5555",
+    "title": "Bend it like beckham",
+    "completed": "true"
+}
