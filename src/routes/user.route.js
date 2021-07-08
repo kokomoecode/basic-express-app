@@ -6,8 +6,9 @@ module.exports = (app) => {
 
   router.get("/:id", controller.findById);
 
-  
   router.post("/", controller.create);
-  
+
+  router.put("/:id", controller.update);
+
   app.use("/api/users", router);
 };

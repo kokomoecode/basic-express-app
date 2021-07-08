@@ -14,5 +14,12 @@ module.exports = (app) => {
 
   router.post("/", controller.create);
 
-  app.use("/api/blogposts/", router);
+  // edit an existing blog post
+
+  router.put("/:id", controller.update);
+
+  // delete a blog post by id
+  router.delete("/:id", controller.deleteById);
+
+  app.use("/api/blogposts", router);
 };

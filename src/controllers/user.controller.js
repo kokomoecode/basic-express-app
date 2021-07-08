@@ -33,3 +33,13 @@ exports.create = (request, response) => {
       response.send(apicall.data);
     });
 };
+
+exports.update = (request, response) => {
+  axios
+    .put("https://jsonplaceholder.typicode.com/users/" + request.params.id, {
+      name: request.body.name,
+    })
+    .then((apicall) => {
+      response.send(apicall.data);
+    });
+};
