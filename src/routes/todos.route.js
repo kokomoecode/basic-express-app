@@ -7,5 +7,9 @@ module.exports = (app) => {
 
   router.post("/", todos.create);
 
+  router.put("/:id", todos.update);
+
+  router.delete("/:id", todos.deleteById);
+
   app.use("/api/todos/", router);
 };
